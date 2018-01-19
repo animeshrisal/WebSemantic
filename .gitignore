@@ -1,2 +1,2 @@
-sentiment/migrations
-webSentiment/pycache
+/sentiment/migrations
+/webSentiment/__pycache__
