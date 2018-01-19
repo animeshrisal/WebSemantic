@@ -1,4 +1,7 @@
 /sentiment/migrations
+/sentiment/__pycache__
 /webSentiment/__pycache__
-/sentiment/sentiment-analysis/keys.py 
-/sentiment/sentiment-analysis/__pycache__
+/sentiment/sentiment_analysis/keys.py 
+/sentiment/sentiment_analysis/__pycache__
+db.sqlite3
+
