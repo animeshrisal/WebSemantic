@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
+    <div class = "container">
+        <form action = "/chart/" method = "get">
+            <label>Enter a hashtag</label>
+            <input type = "text" />
+            <input type = "submit" />
+        </form>
+    </div>
 {% endblock %}

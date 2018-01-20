@@ -9,5 +9,5 @@ t = [({word: (word in word_tokenize(x[0])) for word in dictionary}, x[1]) for x 
 # Step 4 – the classifier is trained with sample data
 classifier = nltk.NaiveBayesClassifier.train(t)
   
-test_data = "Zed is fake and gay"
+test_data = "test"
 test_data_features = {word.lower(): (word in word_tokenize(test_data.lower())) for word in dictionary}
