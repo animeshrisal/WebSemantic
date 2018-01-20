@@ -3,9 +3,11 @@
 {% block content %}
     <div class = "container">
         <form action = "/chart/" method = "get">
-            <label>Enter a hashtag</label>
-            <input type = "text" />
-            <input type = "submit" />
+            <div class = "form-group">
+                <label>Enter a hashtag</label>
+                <input class = "form-control" type = "text" />
+            </div>
+            <input type = "submit" class = "btn btn-primary" />
         </form>
     </div>
 {% endblock %}
