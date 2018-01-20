@@ -12,3 +12,7 @@ def index(request):
         tweet.save()
 
     return render(request, 'index.html')
+
+def chart(request):
+    tweet = tweets.objects.all()
+    return render(request, 'chart.html', {'tweet': tweet})
