@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
+from .models import news
 
 # Create your views here.
 def index(request):
@@ -7,5 +8,6 @@ def index(request):
 
 @csrf_exempt
 def chart(request):
-
-    return render(request, 'chart.html', {'tweets': tweet})
+    NewsData = news.objects.all().remove()
+    
+    return render(request, 'chart.html', {})

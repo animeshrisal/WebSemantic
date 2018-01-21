@@ -4,12 +4,18 @@ from newsmining import getNews
 from nltk.sentiment.vader import SentimentIntensityAnalyzer 
 
 
-news_data = getNews("trump")
 
-analyzer = SentimentIntensityAnalyzer()
+def getDataToView(search):
+    data = []
 
-for x in news_data:
-    for x in news_data['articles']:
-        print(x['description'], ' ', x['publishedAt'])
-        snt = analyzer.polarity_scores(x['description'])
-        print(snt)
+    news_data = getNews(search)
+    analyzer = SentimentIntensityAnalyzer()
+    for x in news_data:
+        for x in news_data['articles']:
+            print(x['description'], ' ', x['publishedAt'])
+            snt = analyzer.polarity_scores(x['description'])
+            data.append({'title': x['title'], 'description' : x['description'], 'date': x['publishedAt'][:10], 'positive': snt['pos'], 'neutral' : snt['neu'], 'negative': snt['neg']})
+
+    return data
+
+print(getDataToView("obama"))
