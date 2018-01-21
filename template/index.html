@@ -3,10 +3,10 @@
 {% block content %}
 <div id = "cover">
         <div class="col-sm-10 offset-sm-1 text-center">
-            <form id = "form" class = "form-inline justify-content-center" action = "/chart/" method = "get">
+            <form id = "form" class = "form-inline justify-content-center" action = "/chart/" method = "post">
                 <div class = "form-group">
                     <label>Enter a hashtag  </label>
-                    <input class = "form-control" type = "text" />
+                    <input class = "form-control" type = "text" name = "hash" />
                 </div>
                 <input type = "submit" class = "btn btn-primary" />
             </form>
