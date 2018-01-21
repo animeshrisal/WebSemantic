@@ -1,3 +1,3 @@
 # Python class project
 
-Twitter Sentiment Analysis
+News Sentiment Analysis
