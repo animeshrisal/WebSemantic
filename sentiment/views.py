@@ -25,8 +25,11 @@ def chart(request):
 
             newsObject.save()
 
-        analyzedData = news.objects.all()
-        return render(request, 'chart.html', {'analyzedData': analyzedData})
+        return render(request, 'chart.html')
 
     except:
         return render(request, 'error.html')
+
+
+def visualize(request):
+    news
