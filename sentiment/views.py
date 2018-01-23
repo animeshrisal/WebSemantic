@@ -38,7 +38,7 @@ def chart(request):
     day = 7
     newsData = news.objects.all().order_by('date')
   
-    sentiment = {}
+    sentiment = []
 
     for x in range(7, 0, -1):
 
@@ -48,7 +48,6 @@ def chart(request):
             if dateOfPost == str(y.date):
                 sentimentValue += y.positive - y.negative_value
 
-
-        sentiment.update({dateOfPost: sentimentValue})
-
+        sentiment.append(sentimentValue)
+    print(sentiment)
     return render(request, 'chart.html', {'sentiment' : sentiment})
