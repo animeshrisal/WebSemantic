@@ -18,9 +18,8 @@ from django.urls import path
 from sentiment import views
 
 urlpatterns = [
-    path('', views.index, name = "index"),
+    path('index/', views.index, name = "index"),
     path('chart/', views.chart, name = "chart"),
-    path('visualize/', views.visualize, name = "visualize"),
     path('admin/', admin.site.urls),
     
 ]

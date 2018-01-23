@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<script>
+    $(document).on('click', '.subs', function(e){
+        vals = document.getElementById("data").value;
+        $.ajax({
+            type: "POST",
+            url: '/index/',
+            data:{
+                search: vals
+            },
+            success: function(response){
+                window.location.assign('/chart/')
+            }
+        });
+    });
+</script>
 <div id = "cover">
         <div class="col-sm-10 offset-sm-1 text-center">
-            <form id = "form" class = "form-inline justify-content-center" action = "/chart/" method = "post">
                 <div class = "form-group">
                     <label>Enter a title  </label>
-                    <input class = "form-control" type = "text" name = "title" />
+                    <input id = "data" class = "form-control" type = "text" name = "title" />
                 </div>
-                <input type = "submit" class = "btn btn-primary" />
-            </form>
+                <button class = "subs">Submit</button>
         </div>
 </div>
 {% endblock %}
